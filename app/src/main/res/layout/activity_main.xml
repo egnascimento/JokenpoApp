@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@color/colorAccent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp" app:srcCompat="@drawable/pedra"
+            android:id="@+id/ivAndroid"
+            app:layout_constraintStart_toEndOf="@+id/ivVoce" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@+id/ivVoce"
+            app:layout_constraintBottom_toBottomOf="@+id/ivVoce"/>
+    <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp" app:srcCompat="@drawable/papel"
+            android:id="@+id/ivVoce"
+            tools:layout_editor_absoluteY="113dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/ivAndroid"/>
+    <TextView
+            tools:text = "Result comes here"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:id="@+id/tvResultado"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp" app:srcCompat="@drawable/papel"
+            android:id="@+id/ivPapel"
+            app:layout_constraintEnd_toStartOf="@+id/ivPedra" app:layout_constraintTop_toTopOf="@+id/ivPedra"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="25dp" app:layout_constraintBottom_toBottomOf="@+id/ivPedra"
+            app:layout_constraintHorizontal_bias="0.5"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="120dp" app:srcCompat="@drawable/pedra"
+            android:id="@+id/ivPedra"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@+id/ivPapel"
+            app:layout_constraintEnd_toStartOf="@+id/ivTesoura" android:layout_marginBottom="40dp"
+            app:layout_constraintHorizontal_bias="0.5"/>
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp" app:srcCompat="@drawable/tesoura"
+            android:id="@+id/ivTesoura"
+            app:layout_constraintStart_toEndOf="@+id/ivPedra" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivPedra" app:layout_constraintBottom_toBottomOf="@+id/ivPedra"
+            android:layout_marginEnd="26dp" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.0"/>
+    <TextView
+            android:text="Você"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/ivVoce"
+            android:layout_marginStart="26dp" android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/ivVoce"/>
+    <TextView
+            android:text="Android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2" android:layout_marginEnd="29dp"
+            android:layout_marginBottom="17dp"
+            app:layout_constraintEnd_toEndOf="@+id/ivAndroid" app:layout_constraintBottom_toTopOf="@+id/ivAndroid"/>
+    <TextView
+            android:text="Escolha a sua jogada"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp" tools:layout_editor_absoluteY="518dp"
+            tools:layout_editor_absoluteX="25dp" android:id="@+id/textView5" android:textSize="24sp"/>
+    <TextView
+            android:text="Última Jogada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" tools:layout_editor_absoluteY="37dp"
+            android:id="@+id/textView6" android:textSize="24sp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
